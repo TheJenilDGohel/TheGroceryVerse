@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        >
+
+        <ImageView
+            android:id="@+id/orderProduct_img"
+            android:layout_width="110sp"
+            android:layout_height="120sp"
+            android:src="@drawable/category"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/dark_green"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:fontFamily="@font/acumin_pro_bold"
+                android:id="@+id/orderProduct_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name : Tomato"
+                android:textSize="16dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/dark_green"/>
+
+            <TextView
+                android:fontFamily="@font/lacu_regular"
+                android:id="@+id/orderProduct_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price : 20"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:layout_marginTop="5dp"
+                android:singleLine="false" />
+
+            <TextView
+                android:fontFamily="@font/acumin_pro_bold"
+                android:id="@+id/orderProduct_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantity : 5"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/purple_700"/>
+            <TextView
+                android:fontFamily="@font/acumin_pro_bold"
+                android:id="@+id/orderProduct_totPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Price : 100"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/purple_700"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

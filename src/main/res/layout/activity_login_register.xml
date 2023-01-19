@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".activities.LoginRegisterActivity">
+
+    <!--    Login card starts here-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/loginCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:background="@drawable/login_card_bg"
+            android:elevation="150dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/tgsLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tgs_horiz_logo" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/login_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tgsLogo"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/lacu_regular"
+                        android:gravity="center"
+                        android:text="Login here"
+                        android:textColor="@color/dark_green"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/login_email"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/login_edittext_bg"
+                        android:drawableStart="@drawable/email_icon"
+                        android:drawablePadding="12dp"
+                        android:fontFamily="@font/lacu_regular"
+                        android:hint="Enter email"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/login_password"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/login_edittext_bg"
+                        android:drawableStart="@drawable/password_icon"
+                        android:drawablePadding="12dp"
+                        android:fontFamily="@font/lacu_regular"
+                        android:hint="Enter Password"
+                        android:inputType="textPassword"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/dark_green"
+                        android:fontFamily="@font/lacu_regular"
+                        android:text="Show Password"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/login_btn"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_button_bg"
+                        android:fontFamily="@font/lacu_regular"
+                        android:text="@string/login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:padding="10sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/lacu_regular"
+                            android:gravity="center_horizontal"
+                            android:text="@string/forget_password"
+                            android:textColor="@color/dark_green"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/forgetPasswordText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10sp"
+                            android:fontFamily="@font/lacu_regular"
+                            android:gravity="center_vertical"
+                            android:text="@string/click_here"
+                            android:textColor="@color/red_btn_bg_color"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/gotoRegister_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginCard"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/lacu_regular"
+                android:text="New Here ?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gotoRegister_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/register_now_btn_bg"
+                android:drawableEnd="@drawable/arrow_forward_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/lacu_regular"
+                android:padding="15dp"
+                android:text="Register Now"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--    Register card starts here-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/gotologin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginCard"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/lacu_regular"
+                android:text="Existing user ?"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gotoLogin_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/goto_login_btn_bg"
+                android:drawableStart="@drawable/arrow_backward"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/lacu_regular"
+                android:padding="15dp"
+                android:text="Login Here"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/registerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gotologin_layout"
+            android:layout_weight="0.6"
+            android:background="@drawable/register_card_bg"
+            android:elevation="150dp"
+            android:gravity="bottom"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/appLogo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tgs_dark_horizontal" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appLogo2">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/register_editTexts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/lacu_regular"
+                            android:gravity="center"
+                            android:text="Register here"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/register_name"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/register_edittext_bg"
+                            android:drawableStart="@drawable/user_icon_white"
+                            android:drawablePadding="12dp"
+                            android:fontFamily="@font/lacu_regular"
+                            android:hint="Enter Name"
+                            android:inputType="text"
+                            android:padding="12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14dp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/register_email"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/register_edittext_bg"
+                            android:drawableStart="@drawable/email_icon_white"
+                            android:drawablePadding="12dp"
+                            android:fontFamily="@font/lacu_regular"
+                            android:hint="Enter Email"
+                            android:inputType="textEmailAddress"
+                            android:padding="12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14dp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/register_password"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/register_edittext_bg"
+                            android:drawableStart="@drawable/password_icon_white"
+                            android:drawablePadding="12dp"
+                            android:fontFamily="@font/lacu_regular"
+                            android:hint="Enter Password"
+                            android:inputType="textPassword"
+                            android:padding="12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14dp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/register_repassword"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/register_edittext_bg"
+                            android:drawableStart="@drawable/password_icon_white"
+                            android:drawablePadding="12dp"
+                            android:fontFamily="@font/lacu_regular"
+                            android:hint="Re-type Password"
+                            android:inputType="textPassword"
+                            android:padding="12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="14dp" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/checkbox1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:fontFamily="@font/lacu_regular"
+                            android:text="Show Password"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/register_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/register_button_bg"
+                            android:fontFamily="@font/lacu_regular"
+                            android:text="Register"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_green"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </ScrollView>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--    Customized Progress Bar-->
+
+    <ImageView
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loadingbackground" />
+
+    <ImageView
+        android:id="@+id/progress_bar1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_bg_shape" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_bar2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/progressbar" />
+
+</RelativeLayout>

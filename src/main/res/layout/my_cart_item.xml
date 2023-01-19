@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:backgroundTint="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/cart_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5sp"
+            android:src="@drawable/strawberry"
+            app:riv_corner_radius="10dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_img"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product Name"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/acumin_pro_bold"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price : 30 rs."
+                android:textSize="16sp"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textColor="@color/dark_green"
+                />
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Date : 31/06/21"
+                android:textSize="16sp"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textColor="@color/dark_green"
+                />
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Time : 11:20:20 PM"
+                android:textSize="16sp"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textColor="@color/dark_green"
+                />
+
+            <TextView
+                android:id="@+id/total_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Quantity : 1"
+                android:textSize="16sp"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textColor="@color/dark_green"
+                />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Price : 400/-"
+                android:textSize="16sp"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textColor="@color/dark_green"
+                />
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_green"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:padding="10sp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

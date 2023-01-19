@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <meta-data
+        android:name="com.google.android.gms.wallet.api.enabled"
+        android:value="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/the_grocery_store_logo_cutout"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyGroceryStore">
+        <activity
+            android:name=".admin.ShowOrderProduct"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.ViewOrderProduct"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCeH2AqqSBJaiIa4rf_1hhtLE66lx-AY80" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".activities.SplashScreen_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.MyGroceryStore.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.FinalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AllProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddpopularproductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.PopularproductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.UserdetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PlacedOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DetailedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.MyGroceryStore.NoActionBar" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activities.LoginRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ViewAllActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

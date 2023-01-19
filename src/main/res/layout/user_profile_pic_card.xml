@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/profile"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:id="@+id/change_text"
+            android:layout_below="@id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Profile"
+            android:textSize="25sp"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/aclonica"
+            android:textStyle="bold"/>
+        <RelativeLayout
+            android:layout_below="@id/change_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp">
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="20dp"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawablePadding="10dp"
+                android:padding="20dp"
+                android:text="CLOSE"
+                />
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:drawableStart="@drawable/ic_baseline_save_24"
+                android:drawablePadding="10dp"
+                android:padding="20dp"
+                android:text="SAVE"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:fontFamily="@font/acumin_pro_bold"
+        android:padding="10dp"
+        android:text="@string/order_details"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_background"
+        android:padding="5dip">
+
+        <EditText
+            android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imgSearch"
+            android:background="#00000000"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="Search Address Here" />
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_search_24" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <fragment
+                        android:id="@+id/mapFragment"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/order_customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mapLayout"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/your_name"
+                android:minHeight="48dp"
+                android:textSize="15dp" />
+
+
+            <EditText
+                android:id="@+id/order_customer_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_customer_name"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/your_address"
+                android:minHeight="48dp"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/order_customer_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_customer_address"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_phone_in_talk_24"
+                android:drawablePadding="10dp"
+                android:hint="@string/your_contact_number"
+                android:minHeight="48dp"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/order_customer_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_customer_number"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="10dp"
+                android:hint="@string/your_email"
+                android:minHeight="48dp"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_customer_email"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/dark_green"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:padding="15dp"
+                android:text="@string/confirm_order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

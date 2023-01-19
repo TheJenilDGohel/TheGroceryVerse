@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:elevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/pop_img"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:riv_corner_radius="10sp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/offers3"
+            android:padding="8sp"
+            />
+
+        <TextView
+            android:id="@+id/pop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/acumin_pro_bold"
+            android:text="Popular Products"
+            android:textSize="19sp"
+            android:textColor="@color/dark_green"
+            />
+        <TextView
+            android:id="@+id/pop_desc"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:fontFamily="@font/lacu_regular"
+            android:text="Description"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5sp"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ratingbar"
+                android:layout_marginLeft="-5dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/pop_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="5.0"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/acumin_pro_bold"/>
+
+            <TextView
+                android:id="@+id/pop_disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Discount 20% Off"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:fontFamily="@font/acumin_pro_bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5sp"
+            >
+            <TextView
+                android:id="@+id/pop_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/acumin_pro_bold"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT"
+                android:padding="20dp"
+                android:layout_marginLeft="30dp"
+                android:drawableStart="@drawable/ic_baseline_edit_24"
+                android:fontFamily="@font/acumin_pro_bold"
+                />
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELETE"
+                android:padding="20dp"
+                android:layout_marginRight="30dp"
+                android:drawableStart="@drawable/ic_baseline_delete_24"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:background="@color/white"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/card"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="7dp"
+            android:layout_margin="5dp"
+            >
+
+            <TextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id :"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/alice"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/order_date"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date : 12/12/2012"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textColor="@color/dark_green"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/producttotalprice"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price : 200"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/user_address"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/order_product_status"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:fontFamily="@font/acumin_pro_bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
